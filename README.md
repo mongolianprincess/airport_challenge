@@ -4,17 +4,17 @@ Airport Challenge
 Instruction
 ---------
 
-* The airport challenge is a software written in ruby and test driven by Rspec.  The tasks is to control the flow of planes at an airport. The planes can land and take off provided that the weather is sunny. In the occasions that it may be stormy, no planes can land or take off.  
+* The airport challenge is a program written in ruby and test driven developed with Rspec.  The goal is to control the flow of planes taking off and landing at an airport, and to ensure that the status of the airplanes match that of its activities. The planes can land and take off provided that the weather is sunny. In the occasions that it may be stormy, no planes can land or take off.  
 
 Approach
 ---------
-* The design of the program is composed of three distinct classes to ensure single responsibility. See below diagram :
+* The design of the program is composed of three distinct classes to ensure single responsibility, therefore decoupling each class of object and how they interact with each other. See below diagram:
 
 ```
                 Airplane <---- Airport ----> Weather
 ```
 
-Airport class is the dominant controller that allows planes to land or taking off at an airport, initiated with default capacity and weather condition.  Airplane class feeds to airport class.  The weather class is extracted for randomised stormy weather condition at 30% chance.
+Airport class is the dominant controller that allows planes to land or taking off at an airport, initiated with default capacity and weather condition.  Airplane class feeds to airport class as a separate entity.  The weather class is extracted as a class of its own for randomised stormy weather condition at 30% chance.
 
 Installation
 -----
@@ -65,5 +65,5 @@ I want to ensure a plane that has taken off from an airport is no longer in that
 
 Comments
 -------
-Please feel free to leave any feedback or comments on bug fixing to the author : Amy Yang <ayc.yang@gmail.com>.
+Please feel free to leave any feedback or comments on bug fixing to the author. 
 Thanks for checking out my repo!
